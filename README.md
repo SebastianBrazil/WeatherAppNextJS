@@ -11,3 +11,4 @@ Designed in 1920 by 1080 px. Desc
 3/26/24 pt 1: Added the city search for the front page. Next is the onClick function to get the data.
 3/26/24 pt 2: Added some styling to the front page.
 3/26/24 pt 3: Prepared some code to call on the weather API proper.
+3/27/24 pt 3: Added more styling and preperation to call on the Weather API

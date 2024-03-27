@@ -1,6 +1,7 @@
+import { propCoord } from '@/interfaces/interfaces'
 import React from 'react'
 
-const HomePageComponent = () => {
+const FullHomePageComponent = (props: propCoord) => {
     return (
         <div>
             <div className='text-center text-[#F3CAF1] slate'>
@@ -11,4 +12,4 @@ const HomePageComponent = () => {
     )
 }
 
-export default HomePageComponent
+export default FullHomePageComponent

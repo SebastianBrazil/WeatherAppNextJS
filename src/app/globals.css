@@ -2,10 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
-.bgImage{
+@font-face {
+  font-family: FaunaOne;
+  src: url(../assets/fonts/FaunaOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: Quando;
+  src: url(../assets/fonts/Quando-Regular.ttf);
+}
+
+.faunaOne {
+  font-family: FaunaOne;
+}
+
+.quando {
+  font-family: Quando;
+}
+
+.bgImage {
   background-image: url('../assets/images/maxim-bogdanov-p_9Uzu0Q3C8-unsplash.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+}
+
+input::placeholder {
+  color: #600B0B;
+}
+
+.shadowT{
+  text-shadow: 0px 2px 10px #4c4646;
 }

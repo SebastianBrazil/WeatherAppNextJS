@@ -8,3 +8,11 @@ export type ICities = [
     }
 ]
 
+export type propLoc = {
+    location: string;
+}
+
+export type propCoord = {
+    lat: string,
+    lon: string;
+}
