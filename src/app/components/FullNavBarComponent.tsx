@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import hamburg from '@/assets/images/boxHamburg.png'
 import { propLoc } from '@/interfaces/interfaces'

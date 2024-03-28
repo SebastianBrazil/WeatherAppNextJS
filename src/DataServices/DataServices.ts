@@ -7,4 +7,11 @@ export const getCities = async (userInput: string) => {
     return data;
 }
 
+export const getCurWea = async (lat: string, lon: string, tempType: string) => {
+    const promise = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${weatherApiKey}&units=${tempType}`)
+    const data = await promise.json();
+
+    return data;
+}
+
 

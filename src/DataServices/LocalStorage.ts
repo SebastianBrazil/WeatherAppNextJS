@@ -7,7 +7,7 @@ const saveToLocalStorage = (savingData: string) => {
 };
 
 const getLocalStorage = () => {
-    let localStorageData = localStorage.getItem("Pokemon");
+    let localStorageData = localStorage.getItem("Cities");
     if (localStorageData === null) {
         return [];
     };
@@ -18,7 +18,7 @@ const removeFromLocalStorage = (savingData: string) => {
     let savedCities = getLocalStorage();
     let removeCities = savedCities.indexOf(savingData);
     savedCities.splice(removeCities, 1);
-    localStorage.setItem("Pokemon", JSON.stringify(savedCities));
+    localStorage.setItem("Cities", JSON.stringify(savedCities));
 };
 
 export { saveToLocalStorage, getLocalStorage, removeFromLocalStorage };
