@@ -1,6 +1,6 @@
 Sebastian Breve-Sanchez
 
-3/ /24
+3/29/24
 
 Weber app :)
 
@@ -14,3 +14,6 @@ Designed in 1920 by 1080 px. Desc
 3/27/24: Added more styling and preperation to call on the Weather API
 3/28/24 pt 1: fixed an error that was preventing data from updating properly
 3/28/24 pt 2: Have all of my data that should show on the current day API call populating. 
+3/29/24 pt 1: Completed styling of all implemented components as well as added the function to switch between temperature types. Next step is favorites, then the 5 day forecast, then mobile version.
+
+Peer Review:

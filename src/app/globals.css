@@ -26,6 +26,7 @@
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+  position: fixed;
 }
 
 input::placeholder {

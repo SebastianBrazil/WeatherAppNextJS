@@ -1,9 +1,6 @@
 'use client'
 
-// make images and inport them
 // add the favorites functions
-// add the temp functions
-// fully style everything i have so far
 // five day forecast
 
 // mobile
@@ -20,6 +17,9 @@ export default function Home() {
   const [cityInput, setCityInput] = useState<string>("");
   const [showCities, setShowCities] = useState<string[]>();
   const [putCityToStorage, setPutCityToStorage] = useState<string>();
+
+  // const [putCityToStorage, setPutCityToStorage] = useState<string>();
+  const [isC, setIsC] = useState<boolean>(false);
 
   const loadCity = (location: string) => {
     setPutCityToStorage(location)
@@ -52,10 +52,12 @@ export default function Home() {
 
 
   return (
-    <div className="bgImage h-screen w-screen" title="Background Sunrise">
+    <div>
+      <div className="bgImage h-screen w-screen z-10" title="Background Sunrise"></div>
+
       <div>
         <div className='flex justify-center pt-10'>
-          <div>
+          <div className="z-30">
             <input value={cityInput} onChange={(e) => setCityInput(e.target.value)} className='text-[#600B0B] faunaOne text-5xl pl-16 bg-[#F3CAF1] rounded-[30px] w-[1000px] h-[100px]' placeholder='Input City' />
             <div className='flex justify-center'>
               <div className='w-[920px] bg-[#E6E2DC] rounded-[30px] z-20'>
@@ -75,11 +77,11 @@ export default function Home() {
         </div>
 
         {
-          putCityToStorage ? <FullNavBarComponent location={putCityToStorage} /> : <NavBarComponent />
+          putCityToStorage ? <FullNavBarComponent currentType={isC} changeType={setIsC} location={putCityToStorage} /> : <NavBarComponent />
         }
 
         {
-          putCityToStorage ? <FullHomePageComponent location={putCityToStorage} /> : <HomePageComponent />
+          putCityToStorage ? <FullHomePageComponent tType={isC} location={putCityToStorage} /> : <HomePageComponent />
         }
 
       </div>
