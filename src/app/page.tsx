@@ -1,8 +1,5 @@
 'use client'
 
-// five day forecast
-// mobile
-
 import { getCities } from "@/DataServices/DataServices";
 import { ICities } from "@/interfaces/interfaces";
 import { useEffect, useState } from "react";
