@@ -50,9 +50,9 @@ export default function Home() {
       <div className="bgImage h-screen w-screen z-10" title="Background Sunrise"></div>
 
       <div>
-        <div className='flex justify-center pt-10'>
-          <div className="z-30 w-[52%]">
-            <input value={cityInput} onChange={(e) => setCityInput(e.target.value)} className='text-[#600B0B] faunaOne text-2xl 2xl:text-5xl pl-16 bg-[#F3CAF1] rounded-[30px] w-full h-[50px] 2xl:h-[100px]' placeholder='Input City' />
+        <div className='flex justify-center pt-40 lg:pt-10'>
+          <div className="z-30 w-[90%] lg:w-[52%]">
+            <input value={cityInput} onChange={(e) => setCityInput(e.target.value)} className='text-[#600B0B] faunaOne text-2xl 2xl:text-5xl max-lg:text-center lg:text-left pl-0 lg:pl-16 bg-[#F3CAF1] rounded-[30px] w-full h-[50px] 2xl:h-[100px]' placeholder='Input City' />
             <div className='flex justify-center'>
               <div className='w-[92%] bg-[#E6E2DC] rounded-[30px] z-20'>
                 {

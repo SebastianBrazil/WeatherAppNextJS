@@ -18,6 +18,7 @@ Designed in 1920 by 1080 px, and 425 by 700px. This is a weather app, built in N
 3/29/24 pt 2: Added the favorites functions.
 3/29/24 pt 3: Added the 5 day forecast. All that's left is responsiveness.
 3/29/24 pt 4: Worked on responsiveness, primarily on additional desktop resolutions. The idea is to see what needs to be modified for the mobile.
+3/29/24 pt 5: Finished mobile, done.
 
 Peer Review: Jerrod Packard
 Peer Review Comments: 
