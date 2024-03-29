@@ -2,9 +2,9 @@ Sebastian Breve-Sanchez
 
 3/29/24
 
-Weber app :)
+Weather App Rebuild
 
-Designed in 1920 by 1080 px. Desc
+Designed in 1920 by 1080 px, and 425 by 700px. This is a weather app, built in Next.js. While considered a rebuild, it is using a different style template as the previous weather app that was created. 
 
 3/22/24: Created the weber app Next.js files. Added the background.
 3/25/24: Added some text. Was looking over old Weather API assignment - never actually finished it, though it was generally functional.
