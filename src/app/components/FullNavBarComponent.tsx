@@ -73,24 +73,25 @@ const FullNavBarComponent = (props: propNav) => {
 
     return (
         <>
-            <div className='z-20 fixed top-[40px] left-[25px] w-44 h-[1000px] bg-[#B7B7B7] rounded-[30px] grid justify-center place-content-between'>
+            <div className='z-20 fixed top-[40px] left-[25px] h-[93%]'>
+                <div className='w-36 2xl:w-44 h-full bg-[#B7B7B7] rounded-[30px] grid justify-center place-content-between'>
+                    <div>
+                        <img onClick={handleShow} className='w-[90px] h-[90px] 2xl:w-[140px] 2xl:h-[130px] mt-3' src={hamburg.src} alt="Hamburger Menu" />
+                        <img onClick={() => { saveOrRemove() }} className='w-[90px] h-[90px] 2xl:w-[140px] 2xl:h-[130px] my-8' src={isFaved ? fullStar.src : star.src} alt="Favorite Button" />
+                        <img onClick={() => { changeTempType() }} className='w-[90px] h-[90px] 2xl:w-[140px] 2xl:h-[130px]' src={props.currentType ? cTemp.src : fTemp.src} alt="Switch Temperature" />
+                    </div>
 
-                <div>
-                    <img onClick={handleShow} className='w-[140px] h-[130px] mt-3' src={hamburg.src} alt="Hamburger Menu" />
-                    <img onClick={() => { saveOrRemove() }} className='w-[140px] h-[130px] my-8' src={isFaved ? fullStar.src : star.src} alt="Favorite Button" />
-                    <img onClick={() => { changeTempType() }} className='w-[140px] h-[130px]' src={props.currentType ? cTemp.src : fTemp.src} alt="Switch Temperature" />
-                </div>
-
-                <div>
-                    <img onClick={() => (goToTop())} className='w-[140px] h-[130px] mb-8' src={upArrowBox.src} alt="Back To Top" />
+                    <div>
+                        <img onClick={() => (goToTop())} className='w-[90px] h-[90px] 2xl:w-[140px] 2xl:h-[130px] my-8' src={upArrowBox.src} alt="Back To Top" />
+                    </div>
                 </div>
             </div>
 
-            <Offcanvas className="min-w-[850px] forceStyle" show={show} onHide={handleClose}>
+            <Offcanvas className="min-w-[44%] forceStyle" show={show} onHide={handleClose}>
                 <Offcanvas.Header>
                     <div className='flex items-center pt-9 pl-6'>
-                        <img onClick={() => { handleClose() }} className='w-36 h-36' src={sideArrow.src} alt="Back Button" />
-                        <h1 className='pl-12 text-[85px] text-[#600B0B] quando'>Saved Cities</h1>
+                        <img onClick={() => { handleClose() }} className='w-28 h-28 2xl:w-36 2xl:h-36' src={sideArrow.src} alt="Back Button" />
+                        <h1 className='pl-12 text-6xl 2xl:text-[85px] text-[#600B0B] quando'>Saved Cities</h1>
                     </div>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
@@ -99,9 +100,9 @@ const FullNavBarComponent = (props: propNav) => {
                             let splitLoc = city.split(", ");
                             return <div className='flex justify-between' key={index} >
                                 {
-                                    splitLoc[1] !== "undefined" ? <p onClick={() => { props.callFavedCity(city); handleClose() }} className='text-[#600B0B] underline text-[36px] faunaOne pl-10 pt-12 mr-20'>{splitLoc[0]}, {splitLoc[1]}, {splitLoc[2]}</p> : <p onClick={() => { props.callFavedCity(city); handleClose() }} className='mr-20 pt-12 text-[#600B0B] underline text-[36px] faunaOne pl-10'>{splitLoc[0]}, {splitLoc[2]}</p>
+                                    splitLoc[1] !== "undefined" ? <p onClick={() => { props.callFavedCity(city); handleClose() }} className='text-[#600B0B] underline text-3xl 2xl:text-[36px] faunaOne pl-10 pt-12 mr-10'>{splitLoc[0]}, {splitLoc[1]}, {splitLoc[2]}</p> : <p onClick={() => { props.callFavedCity(city); handleClose() }} className='mr-10 pt-12 text-[#600B0B] underline text-3xl 2xl:text-[36px] faunaOne pl-10'>{splitLoc[0]}, {splitLoc[2]}</p>
                                 }
-                                <img className='h-9 w-9 mt-14 mr-12' onClick={() => { removeCity(city) }} src={remove.src} alt="Remove Favorite" />
+                                <img className='h-7 w-7 2xl:h-9 2xl:w-9 mt-12 2xl:mt-14 mr-12' onClick={() => { removeCity(city) }} src={remove.src} alt="Remove Favorite" />
                             </div>
                         })
                     }
