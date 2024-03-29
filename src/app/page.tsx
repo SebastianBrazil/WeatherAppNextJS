@@ -1,8 +1,6 @@
 'use client'
 
-// add the favorites functions
 // five day forecast
-
 // mobile
 
 import { getCities } from "@/DataServices/DataServices";
@@ -18,7 +16,6 @@ export default function Home() {
   const [showCities, setShowCities] = useState<string[]>();
   const [putCityToStorage, setPutCityToStorage] = useState<string>();
 
-  // const [putCityToStorage, setPutCityToStorage] = useState<string>();
   const [isC, setIsC] = useState<boolean>(false);
 
   const loadCity = (location: string) => {
@@ -77,7 +74,7 @@ export default function Home() {
         </div>
 
         {
-          putCityToStorage ? <FullNavBarComponent currentType={isC} changeType={setIsC} location={putCityToStorage} /> : <NavBarComponent />
+          putCityToStorage ? <FullNavBarComponent callFavedCity={setPutCityToStorage} currentType={isC} changeType={setIsC} location={putCityToStorage} /> : <NavBarComponent callFavedCity={setPutCityToStorage}/>
         }
 
         {
