@@ -1,4 +1,4 @@
-import { weatherApiKey } from "./Keyring";
+import { weatherApiKey } from "./keyring";
 
 export const getCities = async (userInput: string) => {
     const promise = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${userInput}&limit=5&appid=${weatherApiKey}`)
