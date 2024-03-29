@@ -99,7 +99,7 @@ const FullNavBarComponent = (props: propNav) => {
                             let splitLoc = city.split(", ");
                             return <div className='flex justify-between' key={index} >
                                 {
-                                    splitLoc[1] !== "undefined" ? <p onClick={() => { props.callFavedCity(city); handleClose() }} className='text-[#600B0B] underline text-[36px] faunaOne pl-10 pt-12 mr-20'>{splitLoc[0]}, {splitLoc[1]}, {splitLoc[2]}</p> : <p onClick={() => { props.callFavedCity(city) }} className='mr-20 pt-12 text-[#600B0B] underline text-[36px] faunaOne pl-10'>{splitLoc[0]}, {splitLoc[2]}</p>
+                                    splitLoc[1] !== "undefined" ? <p onClick={() => { props.callFavedCity(city); handleClose() }} className='text-[#600B0B] underline text-[36px] faunaOne pl-10 pt-12 mr-20'>{splitLoc[0]}, {splitLoc[1]}, {splitLoc[2]}</p> : <p onClick={() => { props.callFavedCity(city); handleClose() }} className='mr-20 pt-12 text-[#600B0B] underline text-[36px] faunaOne pl-10'>{splitLoc[0]}, {splitLoc[2]}</p>
                                 }
                                 <img className='h-9 w-9 mt-14 mr-12' onClick={() => { removeCity(city) }} src={remove.src} alt="Remove Favorite" />
                             </div>

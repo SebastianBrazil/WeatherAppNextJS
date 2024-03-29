@@ -30,3 +30,16 @@ export type propCoord = {
     lat: string,
     lon: string;
 }
+
+export type IDate = {
+    dt: number,
+    dt_txt: string,
+    clouds: {
+        all: number
+    },
+    pop: number,
+    main: {
+        temp: number,
+        humidity: number
+    }
+}
