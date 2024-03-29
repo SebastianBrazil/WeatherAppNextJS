@@ -1,6 +1,6 @@
 'use client'
 
-import { getCurWea } from '@/DataServices/DataServices'
+import { getCurWea, getForcastWea } from '@/DataServices/DataServices'
 import { propLoc } from '@/interfaces/interfaces'
 
 import tempImg from "@/assets/images/thermometer-png-4.png"
@@ -59,10 +59,10 @@ const FullHomePageComponent = (props: propLoc) => {
         }
     }
 
-    const getTodayWeather = () => {
+    const getTotWeather = () => {
         let tempType: string;
         let tempSymbol: string;
-        let speedW: string; 
+        let speedW: string;
 
         if (props.tType === false) {
             tempType = "imperial";
@@ -86,7 +86,6 @@ const FullHomePageComponent = (props: propLoc) => {
 
         const innerGetWeather = async () => {
             const dataHolder = await getCurWea(splitLocal[3], splitLocal[4], tempType);
-
             // console.log(dataHolder)
             setCurrentTemp(String(Math.round(dataHolder.main.temp)) + tempSymbol);
             setCurrentHighTemp(String(Math.round(dataHolder.main.temp_max)) + "°");
@@ -101,10 +100,16 @@ const FullHomePageComponent = (props: propLoc) => {
             setWind(String(Math.round(dataHolder.wind.speed * 10) / 10) + " " + speedW);
         }
         innerGetWeather();
+
+        const innerGetForecast = async () => {
+            const dataHolder = await getForcastWea(splitLocal[3], splitLocal[4], tempType);
+            console.log(dataHolder)
+        }
+        innerGetForecast()
     }
 
     useEffect(() => {
-        getTodayWeather();
+        getTotWeather();
     }, [props]);
 
     return (
