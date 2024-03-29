@@ -1,5 +1,13 @@
 'use client'
 
+// make images and inport them
+// add the favorites functions
+// add the temp functions
+// fully style everything i have so far
+// five day forecast
+
+// mobile
+
 import { getCities } from "@/DataServices/DataServices";
 import { ICities } from "@/interfaces/interfaces";
 import { useEffect, useState } from "react";
@@ -67,7 +75,7 @@ export default function Home() {
         </div>
 
         {
-          putCityToStorage ? <FullNavBarComponent location={putCityToStorage} /> : <NavBarComponent/>
+          putCityToStorage ? <FullNavBarComponent location={putCityToStorage} /> : <NavBarComponent />
         }
 
         {
